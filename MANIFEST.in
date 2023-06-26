@@ -1,1 +1,2 @@
 include requirements.txt
+include py2static/default.spec_txt

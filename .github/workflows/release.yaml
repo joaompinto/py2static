@@ -8,15 +8,16 @@ jobs:
   build-n-publish:
     name: Build and publish Python 🐍 distributions 📦 to TestPyPI and PyPI
     runs-on: ubuntu-latest
-
+    permissions:
+      id-token: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-q
-      - name: Set up Python 3.8
+
+      - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
-          python-version: '3.8'
+          python-version: '3.10'
 
       - name: Upgrage core dependencies
         run: python -m pip install --upgrade pip setuptools wheel
@@ -26,6 +27,4 @@ q
 
       - name: Publish distribution 📦 to PyPI
         if: startsWith(github.ref, 'refs/tags')
-        uses: pypa/gh-action-pypi-publish@master
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        uses: pypa/gh-action-pypi-publish@release/v1
