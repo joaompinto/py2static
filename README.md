@@ -7,7 +7,7 @@ This is a simple tool for building Linux static binaries (x64) from Python scrip
 
 # Introduction
 
-It uses [Pyinstaller](https://pyinstaller.org/) to build a dynamic binary and  uses [staticx](https://github.com/JonathonReinhart/staticx) to make it static.
+It uses [Pyinstaller](https://pyinstaller.org/) to build a dynamic binary and uses [staticx](https://github.com/JonathonReinhart/staticx) to make it static.
 
 # Installation
 
